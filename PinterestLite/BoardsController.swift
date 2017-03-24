@@ -22,7 +22,7 @@ class boardsController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var index = 0
     
     override func viewDidLoad() {
-        self.boardsCollection.backgroundColor = UIColor.black
+        self.boardsCollection.backgroundColor = UIColor.darkGray
         
         boardsCollection.delegate = self
         boardsCollection.dataSource = self

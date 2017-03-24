@@ -25,7 +25,7 @@ class pinsController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         pinsLabel.text = "Pins for \(boardName!)"
-        self.pinsCollection.backgroundColor = UIColor.black
+        self.pinsCollection.backgroundColor = UIColor.darkGray
         
         pinsCollection.delegate = self
         pinsCollection.dataSource = self
@@ -61,4 +61,6 @@ class pinsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell?.textLabel?.text = pinArray[indexPath.row].note
         return cell!
     }
+    
+    
 }
