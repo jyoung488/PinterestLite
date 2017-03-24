@@ -11,9 +11,16 @@ import PinterestSDK
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    var pinterestLoginSuccess = false
+    
     override func viewDidLoad() {
+
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        welcomeLabel.isHidden = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +28,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        loginButton.isHidden = true;
+        
+        PDKClient.sharedInstance().authenticate(withPermissions:
+            [PDKClientReadPublicPermissions,
+             PDKClientWritePublicPermissions,
+             PDKClientReadRelationshipsPermissions,
+             PDKClientWriteRelationshipsPermissions], from: self, withSuccess: { (response) in
+                //
+                self.pinterestLoginSuccess = true;
+                
+        }) { (error) in
+            //
+        }
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if (self.pinterestLoginSuccess == true) {
+            performSegue(withIdentifier: "boardsSegue", sender: self)
+        }
+    }
 }
-

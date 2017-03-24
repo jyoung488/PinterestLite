@@ -12,6 +12,8 @@
 		5731B51F1E849AF600F46C9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5731B51D1E849AF600F46C9C /* Main.storyboard */; };
 		5731B5211E849AF600F46C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5731B5201E849AF600F46C9C /* Assets.xcassets */; };
 		5731B5241E849AF600F46C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5731B5221E849AF600F46C9C /* LaunchScreen.storyboard */; };
+		579736271E84A28100B4E6DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 579736261E84A28100B4E6DE /* Default-568h@2x.png */; };
+		579736291E84BF9000B4E6DE /* BoardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579736281E84BF9000B4E6DE /* BoardsController.swift */; };
 		6ECEF0A72B51B7F5FE6FB655 /* Pods_PinterestLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C43F4E96641828BE63BF356 /* Pods_PinterestLite.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		5731B5231E849AF600F46C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5731B5251E849AF600F46C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		579736251E849BCA00B4E6DE /* PinterestLite-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PinterestLite-Bridging-Header.h"; sourceTree = "<group>"; };
+		579736261E84A28100B4E6DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		579736281E84BF9000B4E6DE /* BoardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardsController.swift; sourceTree = "<group>"; };
 		5C43F4E96641828BE63BF356 /* Pods_PinterestLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinterestLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA9B13381481DC724E7E69B /* Pods-PinterestLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestLite/Pods-PinterestLite.release.xcconfig"; sourceTree = "<group>"; };
 		C5C070CA0A80373D27ECF73B /* Pods-PinterestLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestLite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestLite/Pods-PinterestLite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		5731B50D1E849AF500F46C9C = {
 			isa = PBXGroup;
 			children = (
+				579736261E84A28100B4E6DE /* Default-568h@2x.png */,
 				5731B5181E849AF600F46C9C /* PinterestLite */,
 				5731B5171E849AF600F46C9C /* Products */,
 				5782E36209FEBDDEBEFB120A /* Pods */,
@@ -69,6 +74,7 @@
 				5731B5201E849AF600F46C9C /* Assets.xcassets */,
 				5731B5221E849AF600F46C9C /* LaunchScreen.storyboard */,
 				5731B5251E849AF600F46C9C /* Info.plist */,
+				579736281E84BF9000B4E6DE /* BoardsController.swift */,
 			);
 			path = PinterestLite;
 			sourceTree = "<group>";
@@ -154,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5731B5241E849AF600F46C9C /* LaunchScreen.storyboard in Resources */,
+				579736271E84A28100B4E6DE /* Default-568h@2x.png in Resources */,
 				5731B5211E849AF600F46C9C /* Assets.xcassets in Resources */,
 				5731B51F1E849AF600F46C9C /* Main.storyboard in Resources */,
 			);
@@ -214,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579736291E84BF9000B4E6DE /* BoardsController.swift in Sources */,
 				5731B51C1E849AF600F46C9C /* ViewController.swift in Sources */,
 				5731B51A1E849AF600F46C9C /* AppDelegate.swift in Sources */,
 			);
