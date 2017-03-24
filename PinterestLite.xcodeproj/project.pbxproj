@@ -23,6 +23,7 @@
 		5731B5201E849AF600F46C9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5731B5231E849AF600F46C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5731B5251E849AF600F46C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579736251E849BCA00B4E6DE /* PinterestLite-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PinterestLite-Bridging-Header.h"; sourceTree = "<group>"; };
 		5C43F4E96641828BE63BF356 /* Pods_PinterestLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinterestLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA9B13381481DC724E7E69B /* Pods-PinterestLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestLite/Pods-PinterestLite.release.xcconfig"; sourceTree = "<group>"; };
 		C5C070CA0A80373D27ECF73B /* Pods-PinterestLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestLite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestLite/Pods-PinterestLite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 				5731B5191E849AF600F46C9C /* AppDelegate.swift */,
 				5731B51B1E849AF600F46C9C /* ViewController.swift */,
 				5731B51D1E849AF600F46C9C /* Main.storyboard */,
+				579736251E849BCA00B4E6DE /* PinterestLite-Bridging-Header.h */,
 				5731B5201E849AF600F46C9C /* Assets.xcassets */,
 				5731B5221E849AF600F46C9C /* LaunchScreen.storyboard */,
 				5731B5251E849AF600F46C9C /* Info.plist */,
@@ -340,6 +342,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jennifer-Young.PinterestLite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PinterestLite/PinterestLite-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -354,6 +357,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jennifer-Young.PinterestLite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PinterestLite/PinterestLite-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -377,6 +381,7 @@
 				5731B52A1E849AF600F46C9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

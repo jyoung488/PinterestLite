@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PinterestSDK
 
 class ViewController: UIViewController {
 
