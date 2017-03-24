@@ -38,15 +38,11 @@ class ViewController: UIViewController {
              PDKClientWriteRelationshipsPermissions], from: self, withSuccess: { (response) in
                 //
                 self.pinterestLoginSuccess = true;
-                
+                self.performSegue(withIdentifier: "boardsSegue", sender: sender)
+
         }) { (error) in
             //
         }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        if (self.pinterestLoginSuccess == true) {
-            performSegue(withIdentifier: "boardsSegue", sender: self)
-        }
-    }
 }
