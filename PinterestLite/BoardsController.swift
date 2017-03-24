@@ -10,34 +10,58 @@ import Foundation
 import PinterestSDK
 import SwiftyJSON
 
-class boardsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class boardsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var boardsCollection: UICollectionView!
+    @IBOutlet var boardsCollection: UITableView!
+    var boardArray = [BoardModel](){
+        didSet {
+            boardsCollection.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
-        self.boardsCollection.backgroundColor = UIColor.red
+        self.boardsCollection.backgroundColor = UIColor.black
         
-        PDKClient.sharedInstance().getAuthenticatedUserBoards(withFields: ["id", "image", "description", "name", "privacy"], success: {
+        boardsCollection.delegate = self
+        boardsCollection.dataSource = self
+        
+        PDKClient.sharedInstance().getAuthenticatedUserBoards(withFields: ["id", "image", "description", "name"], success: {
             (result) in
             
             if let boards = result?.parsedJSONDictionary["data"] as? [[String: Any]] {
+                self.boardArray.removeAll()
                 for board in boards {
-                    print(board)
+                    if let board = BoardModel(json: JSON(board)) {
+                        self.boardArray.append(board)
+                    }
                 }
+                
+                print("ARR NAME: \(self.boardArray[0].name)")
             
             }
         }, andFailure: nil
         )
     }
- 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "boardsCell", for: indexPath)
-        return cell
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if !boardArray.isEmpty {
+            return boardArray.count
+        }
+        return 0
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "boardsCell")
+        cell?.textLabel?.text = boardArray[indexPath.row].name
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "pinsSegue", sender: indexPath)
+    }
     
 }
