@@ -12,6 +12,7 @@ import SwiftyJSON
 class BoardModel {
     var description: String? = ""
     var name: String? = ""
+    var id: String? = ""
     
     
     init(name: String) {
@@ -23,6 +24,7 @@ class BoardModel {
             self.init(name: name)
             self.description = json["description"].string
             self.name = json["name"].string
+            self.id = json["id"].string
             
             return
         }

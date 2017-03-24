@@ -19,6 +19,8 @@ class boardsController: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
     }
     
+    var index = 0
+    
     override func viewDidLoad() {
         self.boardsCollection.backgroundColor = UIColor.black
         
@@ -35,8 +37,6 @@ class boardsController: UIViewController, UITableViewDelegate, UITableViewDataSo
                         self.boardArray.append(board)
                     }
                 }
-                
-                print("ARR NAME: \(self.boardArray[0].name)")
             
             }
         }, andFailure: nil
@@ -61,7 +61,25 @@ class boardsController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let detailVC = pinsController()
+//        detailVC.boardId = self.boardArray[indexPath.row].id
+//        detailVC.boardName = self.boardArray[indexPath.row].name
+//        self.present(detailVC, animated: true, completion: nil)
+        
+        index = indexPath.row
+        
         self.performSegue(withIdentifier: "pinsSegue", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let board = boardArray[index]
+        
+        if (segue.identifier == "pinsSegue") {
+            if let nextVC = segue.destination as? pinsController {
+                nextVC.boardId = board.id
+                nextVC.boardName = board.name
+            }
+        }
     }
     
 }

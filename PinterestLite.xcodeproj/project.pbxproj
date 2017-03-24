@@ -13,8 +13,10 @@
 		5731B5211E849AF600F46C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5731B5201E849AF600F46C9C /* Assets.xcassets */; };
 		5731B5241E849AF600F46C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5731B5221E849AF600F46C9C /* LaunchScreen.storyboard */; };
 		5779979F1E84E960007E2EBD /* BoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5779979E1E84E960007E2EBD /* BoardModel.swift */; };
+		577997A11E84F9F5007E2EBD /* PinsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577997A01E84F9F5007E2EBD /* PinsController.swift */; };
 		579736271E84A28100B4E6DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 579736261E84A28100B4E6DE /* Default-568h@2x.png */; };
 		579736291E84BF9000B4E6DE /* BoardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579736281E84BF9000B4E6DE /* BoardsController.swift */; };
+		57F8B6911E85BA5900B454F0 /* PinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F8B6901E85BA5900B454F0 /* PinModel.swift */; };
 		6ECEF0A72B51B7F5FE6FB655 /* Pods_PinterestLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C43F4E96641828BE63BF356 /* Pods_PinterestLite.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,9 +29,11 @@
 		5731B5231E849AF600F46C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5731B5251E849AF600F46C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5779979E1E84E960007E2EBD /* BoardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardModel.swift; sourceTree = "<group>"; };
+		577997A01E84F9F5007E2EBD /* PinsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinsController.swift; sourceTree = "<group>"; };
 		579736251E849BCA00B4E6DE /* PinterestLite-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PinterestLite-Bridging-Header.h"; sourceTree = "<group>"; };
 		579736261E84A28100B4E6DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		579736281E84BF9000B4E6DE /* BoardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardsController.swift; sourceTree = "<group>"; };
+		57F8B6901E85BA5900B454F0 /* PinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinModel.swift; sourceTree = "<group>"; };
 		5C43F4E96641828BE63BF356 /* Pods_PinterestLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinterestLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA9B13381481DC724E7E69B /* Pods-PinterestLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestLite/Pods-PinterestLite.release.xcconfig"; sourceTree = "<group>"; };
 		C5C070CA0A80373D27ECF73B /* Pods-PinterestLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestLite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestLite/Pods-PinterestLite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				5731B5251E849AF600F46C9C /* Info.plist */,
 				579736281E84BF9000B4E6DE /* BoardsController.swift */,
 				5779979E1E84E960007E2EBD /* BoardModel.swift */,
+				577997A01E84F9F5007E2EBD /* PinsController.swift */,
+				57F8B6901E85BA5900B454F0 /* PinModel.swift */,
 			);
 			path = PinterestLite;
 			sourceTree = "<group>";
@@ -224,6 +230,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				577997A11E84F9F5007E2EBD /* PinsController.swift in Sources */,
+				57F8B6911E85BA5900B454F0 /* PinModel.swift in Sources */,
 				5779979F1E84E960007E2EBD /* BoardModel.swift in Sources */,
 				579736291E84BF9000B4E6DE /* BoardsController.swift in Sources */,
 				5731B51C1E849AF600F46C9C /* ViewController.swift in Sources */,
