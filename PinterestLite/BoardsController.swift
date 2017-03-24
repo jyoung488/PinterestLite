@@ -8,6 +8,7 @@
 
 import Foundation
 import PinterestSDK
+import SwiftyJSON
 
 class boardsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -15,6 +16,18 @@ class boardsController: UIViewController, UICollectionViewDelegate, UICollection
     
     override func viewDidLoad() {
         self.boardsCollection.backgroundColor = UIColor.red
+        
+        PDKClient.sharedInstance().getAuthenticatedUserBoards(withFields: ["id", "image", "description", "name", "privacy"], success: {
+            (result) in
+            
+            if let boards = result?.parsedJSONDictionary["data"] as? [[String: Any]] {
+                for board in boards {
+                    print(board)
+                }
+            
+            }
+        }, andFailure: nil
+        )
     }
  
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -22,7 +35,9 @@ class boardsController: UIViewController, UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collectionView = collectionView.dequeueReusableCell(withReuseIdentifier: "boardsCell", for: indexPath)
-        return collectionView
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "boardsCell", for: indexPath)
+        return cell
     }
+    
+    
 }
